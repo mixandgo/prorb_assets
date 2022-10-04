@@ -35,3 +35,8 @@ module Assets
     config.generators.system_tests = nil
   end
 end
+
+# bundle exec rdbg -a
+if defined?(Rails::Server) && Rails.env.development?
+  require "debug/open_nonstop"
+end
